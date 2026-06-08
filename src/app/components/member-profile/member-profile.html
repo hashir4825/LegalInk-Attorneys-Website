@@ -1,0 +1,121 @@
+<section class="hero-section" *ngIf="member">
+
+  <a routerLink="/team" class="back-link">
+    <i class="fas fa-arrow-left"></i>
+    Back to Team
+  </a>
+
+  <!-- LEFT CONTENT -->
+
+  <div class="hero-content">
+
+    <div class="profile-info">
+
+      <h1>{{ member.name }}</h1>
+
+      <div class="title-line"></div>
+
+      <div class="designation-row">
+        <span>{{ member.designation }}</span>
+
+        <span *ngIf="member.location">
+          | {{ member.location }}
+        </span>
+      </div>
+
+      <div class="contact-row">
+
+        <span *ngIf="member.phone">
+          <i class="fas fa-phone"></i>
+          {{ member.phone }}
+        </span>
+
+        <span *ngIf="member.email">
+          <i class="fas fa-envelope"></i>
+          {{ member.email }}
+        </span>
+
+      </div>
+
+      <div class="practice-area" *ngIf="member.practiceAreas?.length">
+
+        <h3>Related Capabilities</h3>
+
+        <p>
+          {{ member.practiceAreas.join(', ') }}
+        </p>
+
+      </div>
+
+      <a
+        *ngIf="member.linkedin"
+        [href]="member.linkedin"
+        target="_blank"
+        class="linkedin-link">
+
+        <i class="fab fa-linkedin"></i>
+        Connect on LinkedIn
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div class="hero-image">
+
+    <img
+      [src]="member.image"
+      [alt]="member.name">
+
+  </div>
+
+</section>
+
+<!-- CONTENT SECTION -->
+
+<section class="profile-content" *ngIf="member">
+
+  <!-- BIO -->
+
+  <div class="content-left">
+
+    <p *ngFor="let paragraph of member.bio">
+      {{ paragraph }}
+    </p>
+
+  </div>
+
+  <!-- SIDEBAR -->
+
+  <div class="content-right">
+
+    <div
+      class="info-block"
+      *ngIf="member.education?.length">
+
+      <h3>Education</h3>
+
+      <p *ngFor="let item of member.education">
+        {{ item }}
+      </p>
+
+    </div>
+
+    <div
+      class="info-block"
+      *ngIf="member.memberships?.length">
+
+      <h3>Memberships</h3>
+
+      <p *ngFor="let item of member.memberships">
+        {{ item }}
+      </p>
+
+    </div>
+
+  </div>
+
+</section>

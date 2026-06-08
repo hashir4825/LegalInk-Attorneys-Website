@@ -1,0 +1,283 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero-section {
+  position: relative;
+  display: flex;
+  height: 410px;
+  background: #efefef;
+  overflow: hidden;
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-link {
+  position: absolute;
+  top: 28px;
+  left: 60px;
+  z-index: 10;
+
+  text-decoration: none;
+  color: #102542;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.back-link i {
+  margin-right: 10px;
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.hero-content {
+  width: 58%;
+  padding-top: 60px;
+padding-left: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-right: 60px;
+}
+
+.profile-info {
+  width: 100%;
+  max-width: 980px;
+}
+
+.profile-info h1 {
+  font-size: 64px;
+  font-weight: 300;
+  color: #102542;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.title-line {
+  height: 1px;
+  background: #b5b5b5;
+  margin-bottom: 18px;
+}
+
+.designation-row {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.contact-row span {
+  color: #444;
+  font-size: 14px;
+}
+
+.contact-row i {
+  margin-right: 8px;
+  color: #102542;
+}
+
+/* ==========================================
+   PRACTICE AREA
+========================================== */
+
+.practice-area h3 {
+  color: #1e3a8a;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.practice-area p {
+  color: #444;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   LINKEDIN
+========================================== */
+
+.linkedin-link {
+  text-decoration: none;
+  color: #102542;
+  font-size: 14px;
+}
+
+.linkedin-link:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================
+   IMAGE SECTION
+========================================== */
+
+.hero-image {
+  width: 42%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.hero-image img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+
+/* ==========================================
+   PROFILE CONTENT
+========================================== */
+
+.profile-content {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 90px;
+
+  padding: 35px 40px 60px;
+}
+
+.content-left {
+  flex: 2;
+  padding-left: 25px;
+}
+
+.content-left p {
+  font-size: 16px;
+  line-height: 2;
+  color: #444;
+  margin-bottom: 22px;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.content-right {
+  flex: 1;
+}
+
+.info-block {
+  margin-bottom: 50px;
+}
+
+.info-block h3 {
+  color: #1e3a8a;
+  font-size: 20px;
+  font-weight: 500;
+
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #1e3a8a;
+}
+
+.info-block p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 8px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-content,
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-content {
+    justify-content: center;
+    padding: 60px 30px;
+  }
+
+  .hero-image {
+    justify-content: center;
+    height: 450px;
+  }
+
+  .hero-image img {
+    height: 100%;
+  }
+
+  .profile-content {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 25px;
+  }
+
+  .content-left {
+    padding-left: 0;
+  }
+
+  .profile-info h1 {
+    font-size: 42px;
+  }
+
+  .back-link {
+    left: 30px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .profile-info h1 {
+    font-size: 34px;
+  }
+
+  .designation-row {
+    font-size: 16px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-image {
+    height: 320px;
+  }
+
+  .profile-content {
+    padding: 30px 20px;
+  }
+
+  .back-link {
+    left: 20px;
+    top: 20px;
+  }
+}

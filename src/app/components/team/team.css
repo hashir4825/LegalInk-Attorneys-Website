@@ -1,0 +1,174 @@
+.team-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.team-header {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #1e3a8a;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.team-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 10px;
+}
+
+.divider {
+  width: 90px;
+  height: 3px;
+  background: #1e3a8a;
+  margin: 20px auto;
+}
+
+.description {
+  color: #6b7280;
+  /* line-height: 1.8; */
+  font-size: 25px;
+}
+
+.team-grid {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #d1d5db;
+  padding: 24px;
+  transition: all 0.3s ease;
+  min-height: 280px;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.image-wrapper {
+  width: 220px;
+  min-width: 220px;
+  height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8fafc;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.content {
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.designation {
+  font-size: 20px;
+  color: #4b5563;
+}
+
+.underline {
+  width: 70px;
+  height: 3px;
+  background: #1e3a8a;
+  margin: 14px 0 18px;
+}
+
+.contact p {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4b5563;
+}
+
+.contact i {
+  color: #1e3a8a;
+  width: 18px;
+}
+
+.view-profile {
+  margin-top: 12px;
+  width: fit-content;
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.view-profile:hover {
+  background: #122c73;
+}
+
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: 320px;
+  }
+
+  .content {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  .underline {
+    margin: 14px auto 18px;
+  }
+
+  .contact p {
+    justify-content: center;
+  }
+
+  .view-profile {
+    margin: 15px auto 0;
+  }
+
+  .content h3 {
+    font-size: 28px;
+  }
+}
