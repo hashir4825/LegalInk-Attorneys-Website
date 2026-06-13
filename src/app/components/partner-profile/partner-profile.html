@@ -1,0 +1,158 @@
+<section class="hero-section" *ngIf="partner">
+
+  <a routerLink="/" class="back-link">
+    <i class="fas fa-arrow-left"></i>
+    Back to Home
+  </a>
+
+  <div class="hero-content">
+
+    <div class="profile-info">
+
+      <h1>{{ partner.name }}</h1>
+
+      <div class="title-line"></div>
+
+      <div class="designation-row">
+
+        <span>{{ partner.designation }}</span>
+
+        <span *ngIf="partner.location">
+          | {{ partner.location }}
+        </span>
+
+      </div>
+
+      <div class="contact-row">
+
+        <span *ngIf="partner.phone">
+          <i class="fas fa-phone"></i>
+          {{ partner.phone }}
+        </span>
+
+        <span *ngIf="partner.email">
+          <i class="fas fa-envelope"></i>
+          {{ partner.email }}
+        </span>
+
+      </div>
+
+      <div
+        class="practice-area"
+        *ngIf="partner.practiceAreas?.length">
+
+        <h3>Related Capabilities</h3>
+
+        <p>
+          {{ partner.practiceAreas.join(', ') }}
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="hero-image">
+
+    <img
+      [src]="partner.image"
+      [alt]="partner.name">
+
+  </div>
+
+</section>
+
+<!-- PROFILE CONTENT -->
+
+<section
+  class="profile-content"
+  *ngIf="partner">
+
+  <!-- LEFT CONTENT -->
+
+  <div class="content-left">
+
+    <p *ngFor="let paragraph of partner.bio">
+      {{ paragraph }}
+    </p>
+
+    <!-- REPRESENTATIVE ENGAGEMENTS -->
+
+    <section
+      class="representative-engagements"
+      *ngIf="partner.representativeMatters?.length">
+
+      <h2 class="engagement-heading">
+        Representative Engagements
+      </h2>
+
+      <div class="section-divider"></div>
+
+      <div
+        class="engagement-item"
+        *ngFor="let matter of partner.representativeMatters; let i = index">
+
+        <button
+          class="engagement-header"
+          (click)="toggleMatter(i)">
+
+          <span>
+            {{ matter.title }}
+          </span>
+
+          <i
+            class="fas"
+            [class.fa-plus]="openedMatter !== i"
+            [class.fa-minus]="openedMatter === i">
+          </i>
+
+        </button>
+
+        <div
+          class="engagement-content"
+          *ngIf="openedMatter === i">
+
+          <p>
+            {{ matter.description }}
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+
+  <div class="content-right">
+
+    <div
+      class="info-block"
+      *ngIf="partner.education?.length">
+
+      <h3>Education</h3>
+
+      <p *ngFor="let item of partner.education">
+        {{ item }}
+      </p>
+
+    </div>
+
+    <div
+      class="info-block"
+      *ngIf="partner.memberships?.length">
+
+      <h3>Professional Appointments</h3>
+
+      <p *ngFor="let item of partner.memberships">
+        {{ item }}
+      </p>
+
+    </div>
+
+  </div>
+
+</section>

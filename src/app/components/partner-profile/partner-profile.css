@@ -267,3 +267,163 @@ padding-left: 140px;
     top: 20px;
   }
 }
+
+/* ==========================================
+   REPRESENTATIVE ENGAGEMENTS
+========================================== */
+
+.representative-matters {
+  margin-top: 60px;
+}
+
+.representative-matters h2 {
+  font-size: 34px;
+  color: #102542;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background: #1e3a8a;
+  margin-bottom: 35px;
+}
+
+.matter-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  padding: 22px 24px;
+
+  margin-bottom: 16px;
+
+  background: #f8fafc;
+
+  border-left: 4px solid #1e3a8a;
+
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+.matter-card:hover {
+  transform: translateX(4px);
+  background: #f1f5f9;
+}
+
+.matter-card i {
+  color: #1e3a8a;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.matter-card span {
+  line-height: 1.9;
+  color: #374151;
+  font-size: 15px;
+}
+
+
+/* Collapse design */
+
+.matter-accordion {
+  margin-bottom: 12px;
+}
+
+.matter-header {
+  width: 100%;
+
+  background: #4b4f59;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 18px 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  text-align: left;
+}
+
+.matter-body {
+  border: 1px solid #d9dee6;
+
+  border-top: none;
+
+  background: #ffffff;
+
+  padding: 24px;
+
+  line-height: 1.9;
+
+  color: #444;
+}
+
+
+.representative-engagements-section{
+  max-width:1400px;
+  margin:70px auto;
+  padding:0 40px;
+}
+
+.engagement-heading{
+  font-size:42px;
+  color:#102542;
+  margin-bottom:35px;
+  font-weight:400;
+}
+
+.engagement-item{
+  margin-bottom:12px;
+}
+
+.engagement-header{
+  width:100%;
+  border:none;
+  cursor:pointer;
+
+  background:#595b5e;
+  color:#fff;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 24px;
+
+  font-size:18px;
+  font-weight:500;
+
+  text-align:left;
+}
+
+.engagement-header:hover{
+  background:#95989d;
+}
+
+.engagement-content{
+  background:#fff;
+
+  padding:24px 30px;
+
+  border:1px solid #d9d9d9;
+  border-top:none;
+
+  color:#444;
+  line-height:1.9;
+  font-size:15px;
+}
+
+.engagement-header i{
+  font-size:14px;
+}
