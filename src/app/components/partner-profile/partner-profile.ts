@@ -34,7 +34,7 @@ designation:'Partner',
 location:'Lahore',
 email:'Mak@legalinkattorneys.com',
 phone:'+92 (322) 2321999',
-image:'/Assets/images/Owner2.jpeg',
+image:'/Assets/images/Owner2.png',
 practiceAreas:[
 'Litigation',
 'Taxation',
@@ -119,6 +119,41 @@ representativeMatters: [
   }
 ]
 },
+'sarim-shahid':{
+name:'Barrister Sarim Shahid',
+designation:'Of Counsel',
+location:'Lahore',
+email:'info@legalinkattorneys.com',
+phone:'042 36280666',
+image:'/Assets/images/Sarim.png',
+practiceAreas:[
+'Banking Regulation',
+'Financial Services',
+'Taxation',
+'Fintech',
+'Technology Law',
+'Anti-Money Laundering',
+'Constitutional Law',
+'Regulatory Compliance'
+],
+bio:[
+'Barrister Sarim Shahid serves as Of Counsel to Legalink Attorneys and advises clients on banking and financial regulation, taxation, fintech, technology law, anti-money laundering compliance and constitutional matters.',
+'He completed his LL.B. (Hons.) from the University of London and thereafter undertook the Bar Professional Training Course (BPTC) through Cardiff University and Lincoln\'s Inn.',
+'Prior to entering legal practice, he gained experience with a United Kingdom-based chartered accountancy firm, developing a strong foundation in taxation, financial compliance and regulatory advisory work.',
+'Over the course of his legal career, Barrister Shahid has advised financial institutions, technology companies, fintech ventures and corporate clients on a broad range of regulatory and commercial matters.',
+'His practice includes advising on licensing and compliance requirements before the State Bank of Pakistan, regulatory structuring of financial entities, taxation disputes, anti-money laundering investigations and regulatory enforcement proceedings.',
+'His work frequently sits at the intersection of finance, technology and regulation, with particular emphasis on fintech, digital financial services, virtual assets, banking regulation and emerging technology-driven business models.',
+'As Of Counsel to Legalink Attorneys, Barrister Shahid provides strategic advice on complex regulatory, financial, taxation and technology-related matters, assisting clients in navigating evolving legal and compliance frameworks.'
+],
+education:[
+'LL.B. (Hons.), University of London',
+'Bar Professional Training Course (BPTC), Cardiff University & Lincoln\'s Inn'
+],
+memberships:[
+'Lincoln\'s Inn'
+]
+},
+
 'haroon-hashmi':{
 name:'Haroon Muzaffar Hashmi',
 designation:'Partner',
@@ -147,6 +182,74 @@ education:[
 ],
 memberships:[
 'Punjab Bar Council'
+]
+},
+'justice-shahid-jamil-khan':{
+name:'Justice (R) Shahid Jamil Khan',
+designation:'Of Counsel',
+location:'Lahore',
+email:'info@legalinkattorneys.com',
+phone:'042 36280666',
+image:'/Assets/images/JusticeShahid.png',
+practiceAreas:[
+'Constitutional Law',
+'Taxation',
+'Corporate Law',
+'Banking Law',
+'Commercial Litigation',
+'Regulatory Advisory',
+'Arbitration'
+],
+bio:[
+'Justice (R) Shahid Jamil Khan serves as Of Counsel to Legalink Attorneys and brings over three decades of distinguished experience across constitutional, taxation, corporate, banking and commercial law.',
+'He was enrolled as an Advocate of the High Court in 1994 and became an Advocate of the Supreme Court of Pakistan in 2007. In 2014, he was elevated as a Judge of the Honourable Lahore High Court, where he served until 2024.',
+'Prior to his elevation to the Bench, Justice Khan maintained an extensive legal practice with a particular focus on taxation, corporate and banking matters, commercial litigation and regulatory advisory work.',
+'He also served as Legal Advisor to the Federal Board of Revenue, contributing significantly to the development and interpretation of Pakistan\'s tax jurisprudence.',
+'During his tenure on the Lahore High Court, he adjudicated thousands of matters and authored numerous reported judgments across constitutional law, taxation, corporate law, arbitration, civil law and commercial disputes.',
+'His judicial and professional experience provides clients with unique strategic insight into complex litigation and regulatory matters.',
+'At Legalink Attorneys, Justice Khan advises on high-stakes constitutional, taxation, corporate, banking and regulatory matters, drawing upon his extensive experience as both a practitioner and a member of the superior judiciary.'
+],
+education:[
+'Advocate High Court (1994)',
+'Advocate Supreme Court of Pakistan (2007)'
+],
+memberships:[
+'Former Judge, Lahore High Court',
+'Former Legal Advisor, Federal Board of Revenue'
+]
+},
+'ahsan-akram':{
+name:'Barrister Muhammad Ahsan Akram',
+designation:'Affiliate Partner',
+location:'Lahore',
+email:'info@legalinkattorneys.com',
+phone:'042 36280666',
+image:'/Assets/images/Ahsan.png',
+practiceAreas:[
+'Criminal Defence',
+'Financial Crime',
+'White-Collar Crime',
+'Constitutional Litigation',
+'Regulatory Matters',
+'Commercial Disputes',
+'Service Law'
+],
+bio:[
+'Barrister Muhammad Ahsan Akram is an Affiliate Partner of Legalink Attorneys and advises and represents clients in criminal defence, financial crime, constitutional litigation, regulatory matters and complex commercial disputes.',
+'He holds an LL.B. (Hons.) in Law and Politics from Queen’s University Belfast and completed both the Barrister Training Course with Professional Legal Studies and an LL.M. in Anti-Money Laundering and Financial Crime from BPP Law School, London, graduating with distinction.',
+'Barrister Akram regularly appears before the High Courts and District & Sessions Courts of Pakistan, representing clients in a broad spectrum of contentious matters.',
+'His practice encompasses criminal defence, white-collar and financial crime investigations, constitutional litigation, service and regulatory disputes and complex civil proceedings.',
+'Prior to joining active legal practice, he gained experience through legal and policy placements with the Ministry of Law and Justice, Government of Pakistan and the Ministry of Federal Education and Professional Training.',
+'He has also undertaken advanced international legal studies at The Hague Academy of International Law at the International Court of Justice, focusing on public international law, treaty interpretation and international dispute resolution.',
+'Barrister Akram combines strong advocacy skills with extensive legal research and strategic litigation experience, enabling him to advise clients effectively in high-stakes and legally complex matters.'
+],
+education:[
+'LL.B. (Hons.) Law & Politics, Queen’s University Belfast',
+'Barrister Training Course with Professional Legal Studies',
+'LL.M. Anti-Money Laundering & Financial Crime, BPP Law School London (Distinction)'
+],
+memberships:[
+'Barrister-at-Law'
 ]
 }
 };

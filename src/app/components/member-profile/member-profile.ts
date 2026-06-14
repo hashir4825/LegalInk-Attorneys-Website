@@ -85,6 +85,46 @@ export class MemberProfile {
           'HRCP'
         ]
       },
+      'shuja-kamboh': {
+  name: 'Shuja Ali Kamboh',
+  designation: 'Associate',
+  location: 'Lahore',
+
+  email: 'info@legalinkattorneys.com',
+  phone: '042 36280666',
+
+  image: '/Assets/images/Shuja.png',
+
+  practiceAreas: [
+    'Civil Litigation',
+    'Criminal Law',
+    'Family Law',
+    'Constitutional Law',
+    'Commercial Law',
+    'Legal Research',
+    'Legal Drafting'
+  ],
+
+  bio: [
+    'Shuja Ali Kamboh is an Advocate and holds an LL.B. (Hons.) from the University of London.',
+
+    'With over 1.5 years of experience, he primarily assists the firm’s litigation practice in managing court proceedings and procedural matters at various stages of litigation.',
+
+    'His practice focuses on civil, criminal, family, constitutional and commercial law, legal research, drafting and advisory work.',
+
+    'He regularly advises and represents clients before courts and tribunals, providing practical and effective legal solutions to complex legal disputes.',
+
+    'His experience in litigation management, legal drafting and client representation enables him to contribute effectively to the firm’s dispute resolution and advisory practice.'
+  ],
+
+  education: [
+    'LL.B. (Hons.), University of London'
+  ],
+
+  memberships: [
+    'Punjab Bar Council'
+  ]
+},
 
       'hammad-akbar': {
         name: 'Muhammad Hammad Akbar',
@@ -147,8 +187,50 @@ export class MemberProfile {
 
         memberships: [
           'HRCP'
-                ]
-      }
+                ],
+                
+      },
+      'shabbar-kazmi': {
+  name: 'Syed Shabbar Ali Kazmi',
+  designation: 'Paralegal',
+  location: 'Lahore',
+
+  email: 'info@legalinkattorneys.com',
+  phone: '042 36280666',
+
+  image: '/Assets/images/Shabbar.png',
+
+  practiceAreas: [
+    'Civil Litigation',
+    'Commercial Law',
+    'Taxation',
+    'Corporate Law',
+    'Regulatory Compliance',
+    'Legal Research'
+  ],
+
+  bio: [
+    'Syed Shabbar Ali Kazmi is a Paralegal at Legalink Attorneys and is currently pursuing an LL.B. (Hons.) from the University of London.',
+
+    'He assists the firm’s litigation and advisory teams on a range of civil, commercial, taxation, corporate and regulatory matters, with particular focus on legal research, case law analysis, statutory interpretation and legal documentation.',
+
+    'In his role, Shabbar supports the preparation of legal notices, pleadings, legal opinions, compliance memoranda, contracts and other legal documentation. He also assists in legal due diligence, case management and litigation preparation.',
+
+    'He works closely with the firm’s lawyers in conducting legal research, reviewing legal and commercial documentation and maintaining case records to support effective representation and advisory services.',
+
+    'Prior to joining Legalink Attorneys, Shabbar gained professional experience in business development and client services, strengthening his communication, organizational and client management skills.',
+
+    'With a strong work ethic and detail-oriented approach, he contributes effectively to the firm’s litigation and advisory practice across a broad range of legal and regulatory matters.'
+  ],
+
+  education: [
+    'LL.B. (Hons.), University of London (Undergraduate)'
+  ],
+
+  memberships: [
+    'HRCP'
+  ]
+}
 
     };
     this.member = members[id ?? ''];
