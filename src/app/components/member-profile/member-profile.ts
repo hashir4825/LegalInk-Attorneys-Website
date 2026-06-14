@@ -26,7 +26,7 @@ export class MemberProfile {
         email: 'hamzanawaz@legalinkattorneys.com',
         phone: '042 36280666',
 
-        image: '/Assets/images/Hamzabhai.png',
+        image: '/Assets/images/Hamzabhaipic.png',
 
         practiceAreas: [
           'Tax Advisory',
@@ -60,7 +60,7 @@ export class MemberProfile {
         email: 'hamzabutt@legalinkattorneys.com',
         phone: '042 36280666',
 
-        image: '/Assets/images/Hamza.png',
+        image: '/Assets/images/Hamzapic.png',
         practiceAreas: [
           'Labour Law',
           'Taxation',
@@ -134,7 +134,7 @@ export class MemberProfile {
         email: 'info@legalinkattorneys.com',
         phone: '042 36280666',
 
-        image: '/Assets/images/Hammad.png',
+        image: '/Assets/images/Hammadpic.png',
 
         practiceAreas: [
           'Civil Litigation',
@@ -166,7 +166,7 @@ export class MemberProfile {
         email: 'info@legalinkattorneys.com',
         phone: '042 36280666',
 
-        image: '/Assets/images/Wardah.png',
+        image: '/Assets/images/Wardahpic.png',
         practiceAreas: [
           'Corporate Law',
           'Commercial Law',
