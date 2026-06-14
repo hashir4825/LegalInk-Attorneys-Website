@@ -267,3 +267,32 @@ padding-left: 140px;
     top: 20px;
   }
 }
+
+
+/* Members email and number clickable design  */
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #444;
+  text-decoration: none;
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #1e3a8a;
+}
+
+.contact-item i {
+  color: #102542;
+}

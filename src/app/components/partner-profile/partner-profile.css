@@ -427,3 +427,36 @@ padding-left: 140px;
 .engagement-header i{
   font-size:14px;
 }
+
+/* Members emails and phone numbers should be clickable links. */
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #444;
+  text-decoration: none;
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.contact-link i {
+  color: #102542;
+}
+
+.contact-link:hover {
+  color: #1e3a8a;
+}
+
+.contact-link:hover i {
+  color: #1e3a8a;
+}

@@ -23,19 +23,31 @@
         </span>
       </div>
 
-      <div class="contact-row">
+<!-- Members email and numbers clickable and open email client and dialer respectively -->
+<div class="contact-row">
 
-        <span *ngIf="member.phone">
-          <i class="fas fa-phone"></i>
-          {{ member.phone }}
-        </span>
+  <a
+    *ngIf="member.phone"
+    [href]="'tel:' + member.phone"
+    class="contact-item">
 
-        <span *ngIf="member.email">
-          <i class="fas fa-envelope"></i>
-          {{ member.email }}
-        </span>
+    <i class="fas fa-phone"></i>
+    {{ member.phone }}
 
-      </div>
+  </a>
+
+  <a
+    *ngIf="member.email"
+    [href]="'mailto:' + member.email"
+    class="contact-item">
+
+    <i class="fas fa-envelope"></i>
+    {{ member.email }}
+
+  </a>
+
+</div>
+
 
       <div class="practice-area" *ngIf="member.practiceAreas?.length">
 
