@@ -125,7 +125,7 @@ designation:'Of Counsel',
 location:'Lahore',
 email:'info@legalinkattorneys.com',
 phone:'042 36280666',
-image:'/Assets/images/Sarim.png',
+image:'/Assets/images/sarim.png',
 practiceAreas:[
 'Banking Regulation',
 'Financial Services',

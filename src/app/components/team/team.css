@@ -1,27 +1,31 @@
+/* ==========================================
+   LAWYERS SECTION
+========================================== */
+
 .team-section {
   padding: 80px 20px;
   background: #ffffff;
 }
 
 .team-header {
-  max-width: 800px;
-  margin: 0 auto 60px;
+  max-width: 900px;
+  margin: 0 auto 70px;
   text-align: center;
 }
 
 .subtitle {
   color: #1e3a8a;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
 .team-header h2 {
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 700;
-  color: #1f2937;
-  margin-top: 10px;
+  color: #102542;
+  margin-top: 12px;
 }
 
 .divider {
@@ -33,26 +37,39 @@
 
 .description {
   color: #6b7280;
-  /* line-height: 1.8; */
-  font-size: 25px;
+  font-size: 18px;
+  line-height: 1.9;
 }
 
-.team-grid {
+/* ==========================================
+   LAWYERS GRID
+========================================== */
+
+.lawyers-grid {
   max-width: 1400px;
-  margin: auto;
+  margin: 0 auto;
+
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px;
+
+  gap: 35px;
 }
+
+/* ==========================================
+   LAWYER CARD
+========================================== */
 
 .team-card {
   display: flex;
   align-items: center;
+
   background: #f8fafc;
   border: 1px solid #d1d5db;
+
   padding: 24px;
+  min-height: 320px;
+
   transition: all 0.3s ease;
-  min-height: 280px;
 }
 
 .team-card:hover {
@@ -63,13 +80,11 @@
 .image-wrapper {
   width: 220px;
   min-width: 220px;
-  height: 260px;
+  height: 300px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: #f8fafc;
 }
 
 .image-wrapper img {
@@ -78,64 +93,122 @@
   object-fit: contain;
 }
 
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
 .content {
   padding-left: 24px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   flex: 1;
 }
 
 .content h3 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
-  color: #374151;
-  margin-bottom: 6px;
+  color: #102542;
+
   line-height: 1.2;
+  margin-bottom: 6px;
 }
 
 .designation {
-  font-size: 20px;
-  color: #4b5563;
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #1e3a8a;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .underline {
   width: 70px;
   height: 3px;
+
   background: #1e3a8a;
+
   margin: 14px 0 18px;
 }
 
-.contact p {
-  margin-bottom: 10px;
+.summary {
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin: 18px 0;
+}
+
+.contact-link {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+
+  text-decoration: none;
+
   color: #4b5563;
+  font-size: 15px;
+
+  transition: 0.3s ease;
 }
 
-.contact i {
-  color: #1e3a8a;
-  width: 18px;
+.contact-link:hover {
+  color: #102542;
 }
+
+.contact-link i {
+  width: 18px;
+  min-width: 18px;
+
+  color: #1e3a8a;
+  font-size: 14px;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
 
 .view-profile {
-  margin-top: 12px;
   width: fit-content;
+
   background: #1e3a8a;
   color: #ffffff;
-  padding: 10px 20px;
+
   text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+
+  padding: 11px 22px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
 }
 
 .view-profile:hover {
   background: #122c73;
 }
 
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
 @media (max-width: 1200px) {
-  .team-grid {
+  .lawyers-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -152,15 +225,14 @@
   }
 
   .content {
-    padding-left: 0;
-    padding-top: 20px;
+    padding: 20px 0 0;
   }
 
   .underline {
     margin: 14px auto 18px;
   }
 
-  .contact p {
+  .contact-link {
     justify-content: center;
   }
 
@@ -171,40 +243,8 @@
   .content h3 {
     font-size: 28px;
   }
-}
 
-
-/* Numbers and emails clickable design */
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 18px 0;
-}
-
-.contact-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  text-decoration: none;
-
-  color: #4b5563;
-  font-size: 15px;
-  line-height: 1.5;
-
-  transition: 0.3s ease;
-}
-
-.contact-link:hover {
-  color: #102542;
-}
-
-.contact-link i {
-  width: 18px;
-  min-width: 18px;
-
-  color: #1e3a8a;
-  font-size: 14px;
+  .team-header h2 {
+    font-size: 34px;
+  }
 }
