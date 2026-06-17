@@ -248,3 +248,89 @@
     font-size: 34px;
   }
 }
+
+.lawyers-filter {
+  max-width: 1400px;
+  margin: 0 auto 50px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  border: 1px solid #bdbdbd;
+  background: #fff;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box i {
+  width: 80px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #54565d;
+  color: white;
+
+  font-size: 24px;
+}
+
+.search-box input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  padding: 0 18px;
+
+  font-size: 16px;
+}
+
+.lawyers-filter select {
+  border: none;
+  border-left: 1px solid #bdbdbd;
+
+  height: 40px;
+
+  padding: 0 18px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  background: white;
+}
+
+@media (max-width: 992px) {
+
+  .lawyers-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .lawyers-filter select {
+    border-left: none;
+    border-top: 1px solid #d1d5db;
+  }
+
+}
+.clear-filters {
+  border: none;
+
+  background: #102542;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+
+.clear-filters:hover {
+  background: #1e3a8a;
+}

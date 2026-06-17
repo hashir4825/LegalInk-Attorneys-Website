@@ -2,359 +2,104 @@
   <div class="team-header">
     <p class="subtitle">LEGALINK ATTORNEYS</p>
 
-    <h2>Meet Our Team</h2>
+    <h2>Our Team</h2>
 
     <div class="divider"></div>
 
     <p class="description">
-      Our legal professionals combine litigation experience, regulatory advisory, taxation expertise
-      and corporate legal support to provide practical and client-focused legal solutions.
+      Our lawyers combine litigation experience, regulatory advisory, taxation expertise and
+      corporate legal support to provide practical and client-focused legal solutions.
     </p>
   </div>
+
+  <!-- FILTER BAR -->
+
+  <div class="lawyers-filter">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+
+      <input
+        type="text"
+        placeholder="Search for a lawyer or keyword"
+        [(ngModel)]="searchTerm"
+        (input)="filterLawyers()"
+      />
+    </div>
+
+    <select [(ngModel)]="selectedLocation" (change)="filterLawyers()">
+      <option value="">Location</option>
+      <option value="Lahore">Lahore</option>
+            <option value="Islamabad">Islamabad</option>
+    </select>
+
+    <select [(ngModel)]="selectedCategory" (change)="filterLawyers()">
+      <option value="">Designation</option>
+
+      <option value="Partner">Partner</option>
+      <option value="Of Counsel">Of Counsel</option>
+      <option value="Affiliate Partner">Affiliate Partner</option>
+      <option value="Associate">Associate</option>
+      <option value="Paralegal">Paralegal</option>
+    </select>
+
+    <select [(ngModel)]="selectedPracticeArea" (change)="filterLawyers()">
+      <option value="">Practice Area</option>
+
+      <option value="Corporate Law">Corporate Law</option>
+      <option value="Commercial Law">Commercial Law</option>
+      <option value="Constitutional Law">Constitutional Law</option>
+      <option value="Taxation">Taxation</option>
+      <option value="Labour Law">Labour Law</option>
+      <option value="Civil Litigation">Civil Litigation</option>
+      <option value="Criminal Defence">Criminal Defence</option>
+      <option value="Legal Research">Legal Research</option>
+      <option value="Banking & Financial Regulation">Banking & Financial Regulation</option>
+    </select>
+    
+  </div>
+
+  <!-- LAWYERS GRID -->
+
   <div class="lawyers-grid">
-    <!-- PARTNERS HIGHLIGHT SECTION -->
+    <div class="team-card" *ngFor="let lawyer of filteredLawyers">
+      <!-- IMAGE -->
 
-    <!-- Partner 1 Areeb-->
-<div class="team-card">
-  <div class="image-wrapper">
-    <img src="/Assets/images/Owner2pic.png" alt="Muhammad Areeb Khan" />
-  </div>
-
-  <div class="content">
-
-    <h3>Muhammad Areeb Khan</h3>
-
-    <p class="designation">Partner</p>
-
-    <div class="underline"></div>
-
-    <p class="summary">
-      Corporate & Commercial Law, Taxation, Banking Law and Regulatory Advisory.
-    </p>
-
-    <div class="contact">
-      <a href="mailto:mak@legalinkattorneys.com" class="contact-link">
-        <i class="fas fa-envelope"></i>
-        mak@legalinkattorneys.com
-      </a>
-
-      <a href="tel:+923222321999" class="contact-link">
-        <i class="fas fa-phone"></i>
-        +92 (322) 2321999
-      </a>
-    </div>
-
-    <a routerLink="/partners/areeb-khan" class="view-profile">
-      View Profile
-    </a>
-
-  </div>
-</div>
-
-    <!-- Partner 4 Shahid Jamil-->
-    <div class="team-card">
       <div class="image-wrapper">
-        <img src="/Assets/images/JusticeShahid.png" alt="Justice (R) Shahid Jamil Khan" />
+        <img [src]="lawyer.image" [alt]="lawyer.name" />
       </div>
 
-      <div class="content">
-        <h3>Justice (R) Shahid Jamil Khan</h3>
+      <!-- CONTENT -->
 
-        <p class="designation">Of Counsel</p>
+      <div class="content">
+        <h3>
+          {{ lawyer.name }}
+        </h3>
+
+        <p class="designation">
+          {{ lawyer.designation }}
+        </p>
 
         <div class="underline"></div>
 
-        <p class="summary">
-          Constitutional, Taxation, Corporate, Banking and Commercial Law with over three decades of
-          experience.
+        <p class="summary" *ngIf="lawyer.practiceArea">
+          {{ lawyer.practiceArea }}
         </p>
 
         <div class="contact">
-          <a href="mailto:info@legalinkattorneys.com" class="contact-link">
+          <a class="contact-link" [href]="'mailto:' + lawyer.email">
             <i class="fas fa-envelope"></i>
-            info@legalinkattorneys.com
+
+            {{ lawyer.email }}
           </a>
 
-          <a href="tel:+924236280666" class="contact-link">
+          <a class="contact-link" [href]="'tel:' + lawyer.phone">
             <i class="fas fa-phone"></i>
-            042 36280666
+
+            {{ lawyer.phone }}
           </a>
         </div>
 
-        <a routerLink="/partners/justice-shahid-jamil-khan" class="view-profile"> View Profile </a>
-      </div>
-    </div>
-
-    <!-- Partner 2 Haroon-->
-    <div class="team-card">
-      <div class="image-wrapper">
-        <img src="/Assets/images/pic2pic.png" alt="Haroon Muzaffar Hashmi" />
-      </div>
-
-      <div class="content">
-        <h3>Haroon Muzaffar Hashmi</h3>
-
-        <p class="designation">Partner</p>
-
-        <div class="underline"></div>
-
-        <p class="summary">
-          International Commercial Law, Litigation Strategy and Corporate Advisory.
-        </p>
-
-        <div class="contact">
-          <a href="mailto:info@legalinkattorneys.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-            info@legalinkattorneys.com
-          </a>
-
-          <a href="tel:+924236280666" class="contact-link">
-            <i class="fas fa-phone"></i>
-            042 36280666
-          </a>
-        </div>
-
-        <a routerLink="/partners/haroon-hashmi" class="view-profile"> View Profile </a>
-      </div>
-    </div>
-
-    <!-- Partner 5 Ahsan Akram-->
-    <div class="team-card">
-      <div class="image-wrapper">
-        <img src="/Assets/images/Ahsan.png" alt="Barrister Muhammad Ahsan Akram" />
-      </div>
-
-      <div class="content">
-        <h3>Barrister Muhammad Ahsan Akram</h3>
-
-        <p class="designation">Affiliate Partner</p>
-
-        <div class="underline"></div>
-
-        <p class="summary">
-          Criminal Defence, Financial Crime, Constitutional Litigation and Complex Commercial
-          Disputes.
-        </p>
-
-        <div class="contact">
-          <a href="mailto:info@legalinkattorneys.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-            info@legalinkattorneys.com
-          </a>
-
-          <a href="tel:+924236280666" class="contact-link">
-            <i class="fas fa-phone"></i>
-            042 36280666
-          </a>
-        </div>
-
-        <a routerLink="/partners/ahsan-akram" class="view-profile"> View Profile </a>
-      </div>
-    </div>
-    <!-- Partner 3 Sarim-->
-    <div class="team-card">
-      <div class="image-wrapper">
-        <img src="/Assets/images/sarim.png" alt="Barrister Sarim Shahid" />
-      </div>
-
-      <div class="content">
-        <h3>Barrister Sarim Shahid</h3>
-
-        <p class="designation">Of Counsel</p>
-
-        <div class="underline"></div>
-
-        <p class="summary">
-          Banking & Financial Regulation, Taxation, Fintech, Technology Law and Anti-Money
-          Laundering Compliance.
-        </p>
-
-        <div class="contact">
-          <a href="mailto:info@legalinkattorneys.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-            info@legalinkattorneys.com
-          </a>
-
-          <a href="tel:+924236280666" class="contact-link">
-            <i class="fas fa-phone"></i>
-            042 36280666
-          </a>
-        </div>
-
-        <a routerLink="/partners/sarim-shahid" class="view-profile"> View Profile </a>
-      </div>
-    </div>
-
-    <!-- Team Members -->
-    <!-- Muhammad Hamza Nawaz -->
-    <div class="team-card">
-      <div class="image-wrapper">
-        <img src="/Assets/images/Hamzabhaipic.png" alt="Muhammad Hamza Nawaz" />
-      </div>
-
-      <div class="content">
-        <h3>Muhammad Hamza Nawaz</h3>
-
-        <p class="designation">Associate</p>
-
-        <div class="underline"></div>
-
-        <div class="contact">
-          <a href="mailto:hamzanawaz@legalinkattorneys.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-            hamzanawaz@legalinkattorneys.com
-          </a>
-
-          <a href="tel:+924236280666" class="contact-link">
-            <i class="fas fa-phone"></i>
-            042 36280666
-          </a>
-        </div>
-
-        <a routerLink="/team/hamza-nawaz" class="view-profile"> View Profile </a>
-      </div>
-    </div>
-
-    <!-- Hamza Butt -->
-    <div class="team-card">
-      <div class="image-wrapper">
-        <img src="/Assets/images/Hamzapic.png" alt="Hamza Butt" />
-      </div>
-
-      <div class="content">
-        <h3>Hamza Butt</h3>
-
-        <p class="designation">Associate</p>
-
-        <div class="underline"></div>
-
-        <div class="contact">
-          <a href="mailto:hamzabutt@legalinkattorneys.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-            hamzabutt@legalinkattorneys.com
-          </a>
-
-          <a href="tel:+924236280666" class="contact-link">
-            <i class="fas fa-phone"></i>
-            042 36280666
-          </a>
-        </div>
-
-        <a routerLink="/team/hamza-butt" class="view-profile"> View Profile </a>
-      </div>
-    </div>
-    <!-- Shuja Ali -->
-    <div class="team-card">
-      <div class="image-wrapper">
-        <img src="/Assets/images/Shuja.png" alt="Shuja Ali Kamboh" />
-      </div>
-
-      <div class="content">
-        <h3>Shuja Ali</h3>
-
-        <p class="designation">Associate</p>
-
-        <div class="underline"></div>
-
-        <div class="contact">
-          <a href="mailto:info@legalinkattorneys.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-            info@legalinkattorneys.com
-          </a>
-
-          <a href="tel:+924236280666" class="contact-link">
-            <i class="fas fa-phone"></i>
-            042 36280666
-          </a>
-        </div>
-
-        <a routerLink="/team/shuja-kamboh" class="view-profile"> View Profile </a>
-      </div>
-    </div>
-    <!-- Muhammad Hammad Akbar -->
-    <div class="team-card">
-      <div class="image-wrapper">
-        <img src="/Assets/images/Hammadpic.png" alt="Muhammad Hammad Akbar" />
-      </div>
-
-      <div class="content">
-        <h3>Muhammad Hammad Akbar</h3>
-
-        <p class="designation">Paralegal</p>
-
-        <div class="underline"></div>
-
-        <div class="contact">
-          <a href="mailto:info@legalinkattorneys.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-            info@legalinkattorneys.com
-          </a>
-
-          <a href="tel:+924236280666" class="contact-link">
-            <i class="fas fa-phone"></i>
-            042 36280666
-          </a>
-        </div>
-
-        <a routerLink="/team/hammad-akbar" class="view-profile"> View Profile </a>
-      </div>
-    </div>
-
-    <!-- Wardah Shahid -->
-    <div class="team-card">
-      <div class="image-wrapper">
-        <img src="/Assets/images/Wardahpic.png" alt="Wardah Shahid" />
-      </div>
-
-      <div class="content">
-        <h3>Wardah Shahid</h3>
-
-        <p class="designation">Paralegal</p>
-
-        <div class="underline"></div>
-
-        <div class="contact">
-          <a href="mailto:info@legalinkattorneys.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-            info@legalinkattorneys.com
-          </a>
-
-          <a href="tel:+924236280666" class="contact-link">
-            <i class="fas fa-phone"></i>
-            042 36280666
-          </a>
-        </div>
-
-        <a routerLink="/team/wardah-shahid" class="view-profile"> View Profile </a>
-      </div>
-    </div>
-
-    <!-- Shabbar Ali Kazmi -->
-    <div class="team-card">
-      <div class="image-wrapper">
-        <img src="/Assets/images/Shabbar.png" alt="Shabbar Ali Kazmi" />
-      </div>
-
-      <div class="content">
-        <h3>Shabbar Kazmi</h3>
-
-        <p class="designation">Paralegal</p>
-
-        <div class="underline"></div>
-
-        <div class="contact">
-          <a href="mailto:info@legalinkattorneys.com" class="contact-link">
-            <i class="fas fa-envelope"></i>
-            info@legalinkattorneys.com
-          </a>
-
-          <a href="tel:+924236280666" class="contact-link">
-            <i class="fas fa-phone"></i>
-            042 36280666
-          </a>
-        </div>
-
-        <a routerLink="/team/shabbar-kazmi" class="view-profile"> View Profile </a>
+        <a [routerLink]="lawyer.route" class="view-profile"> View Profile </a>
       </div>
     </div>
   </div>
