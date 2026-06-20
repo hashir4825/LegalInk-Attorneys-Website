@@ -2,12 +2,17 @@
    HERO SECTION
 ========================================== */
 
-.hero-section {
-  position: relative;
-  display: flex;
-  height: 410px;
-  background: #efefef;
-  overflow: hidden;
+.hero-section{
+    position:relative;
+    display:flex;
+    align-items:center;
+
+    background:#efefef;
+
+    padding-top:90px;
+    padding-bottom:12px;
+
+    overflow:visible;
 }
 
 /* ==========================================
@@ -16,7 +21,7 @@
 
 .back-link {
   position: absolute;
-  top: 28px;
+  top: 125px;
   left: 60px;
   z-index: 10;
 
@@ -39,28 +44,28 @@
    LEFT CONTENT
 ========================================== */
 
-.hero-content {
-  width: 58%;
-  padding-top: 60px;
-padding-left: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.hero-content{
+    width:58%;
 
-  padding-right: 60px;
+    display:flex;
+
+    align-items:flex-start;
+
+    padding:40px 70px 40px 140px;
 }
-
 .profile-info {
   width: 100%;
   max-width: 980px;
 }
 
 .profile-info h1 {
-  font-size: 64px;
+  font-size: 72px;
   font-weight: 300;
   color: #102542;
-  line-height: 1.1;
-  margin-bottom: 10px;
+
+  line-height: 1.05;
+
+  margin-bottom: 18px;
 }
 
 .title-line {
@@ -114,22 +119,23 @@ padding-left: 140px;
    IMAGE SECTION
 ========================================== */
 
-.hero-image {
-  width: 42%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+.hero-image{
+    width:42%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    align-self:stretch;
 }
 
-.hero-image img {
-  height: 100%;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: left center;
-  display: block;
-}
+.hero-image img{
+    height:500px;
+    width:auto;
+    max-width:100%;
 
+    object-fit:contain;
+    object-position:bottom center;
+    margin-bottom:-12px;
+}
 /* ==========================================
    PROFILE CONTENT
 ========================================== */
@@ -202,10 +208,10 @@ padding-left: 140px;
     width: 100%;
   }
 
-  .hero-content {
-    justify-content: center;
-    padding: 60px 30px;
-  }
+ .hero-content {
+  justify-content: center;
+  padding: 120px 40px 40px;
+}
 
   .hero-image {
     justify-content: center;
@@ -254,18 +260,22 @@ padding-left: 140px;
     gap: 10px;
   }
 
-  .hero-image {
-    height: 320px;
-  }
+.hero-image {
+  height: auto;
+  padding: 25px 0;
+}
+
+.hero-image img {
+  max-height: 360px;
+}
 
   .profile-content {
     padding: 30px 20px;
   }
-
-  .back-link {
-    left: 20px;
-    top: 20px;
-  }
+.back-link{
+    left:20px;
+    top:105px;
+}
 }
 
 /* ==========================================

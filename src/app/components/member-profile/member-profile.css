@@ -3,11 +3,19 @@
 ========================================== */
 
 .hero-section {
-  position: relative;
-  display: flex;
-  height: 410px;
-  background: #efefef;
-  overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    min-height: 620px;
+
+    background: #efefef;
+
+    overflow: hidden;
+
+    padding-top: 90px;
+
+    box-sizing: border-box;
 }
 
 /* ==========================================
@@ -16,7 +24,7 @@
 
 .back-link {
   position: absolute;
-  top: 28px;
+  top: 120px;
   left: 60px;
   z-index: 10;
 
@@ -39,15 +47,17 @@
    LEFT CONTENT
 ========================================== */
 
-.hero-content {
-  width: 58%;
-  padding-top: 60px;
-padding-left: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.hero-content{
 
-  padding-right: 60px;
+    width:58%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding-left:120px;
+    padding-right:80px;
+
 }
 
 .profile-info {
@@ -116,8 +126,9 @@ padding-left: 140px;
 
 .hero-image {
   width: 42%;
+
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-end;
 }
 
@@ -226,12 +237,15 @@ padding-left: 140px;
     padding-left: 0;
   }
 
-  .profile-info h1 {
-    font-size: 42px;
-  }
+.profile-info h1 {
+    font-size:64px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
 
   .back-link {
     left: 30px;
+      top: 120px;
   }
 }
 
@@ -264,7 +278,7 @@ padding-left: 140px;
 
   .back-link {
     left: 20px;
-    top: 20px;
+    top: 120px;
   }
 }
 
