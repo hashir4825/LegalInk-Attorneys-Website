@@ -63,4 +63,103 @@
     </div>
   </div>
 </section>
+<!-- ==========================================
+     CLIENT TESTIMONIALS
+========================================== -->
+
+<section class="testimonials-section">
+
+  <div class="testimonials-container">
+
+    <div class="section-header">
+
+      <p class="section-subtitle">
+        CLIENT TESTIMONIALS
+      </p>
+
+      <h2>
+        What Our <span>Clients Say</span>
+      </h2>
+
+      <div class="section-divider"></div>
+
+      <p class="section-description">
+        Long-term relationships are built on trust, professionalism and
+        consistently delivering practical legal solutions.
+      </p>
+
+    </div>
+
+    <div class="testimonial-slider">
+
+      <!-- Previous -->
+
+      <button
+        class="slider-btn prev"
+        type="button"
+        aria-label="Previous Review"
+        (click)="previousSlide()">
+
+        <i class="fas fa-chevron-left"></i>
+
+      </button>
+
+      <!-- Testimonial -->
+
+      <div class="testimonial-card">
+
+        <div class="quote-icon">
+          <i class="fas fa-quote-left"></i>
+        </div>
+
+        <p class="testimonial-text">
+          "{{ testimonials[currentSlide].review }}"
+        </p>
+
+        <div class="client-info">
+
+          <h3>
+            {{ testimonials[currentSlide].company }}
+          </h3>
+
+          <span>
+            {{ testimonials[currentSlide].designation }}
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- Next -->
+
+      <button
+        class="slider-btn next"
+        type="button"
+        aria-label="Next Review"
+        (click)="nextSlide()">
+
+        <i class="fas fa-chevron-right"></i>
+
+      </button>
+
+    </div>
+
+    <!-- Dots -->
+
+    <div class="slider-dots">
+
+      <button
+        *ngFor="let testimonial of testimonials; let i = index"
+        type="button"
+        class="dot"
+        [class.active]="i === currentSlide"
+        (click)="goToSlide(i)"
+        [attr.aria-label]="'Go to review ' + (i + 1)">
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
 </section>
