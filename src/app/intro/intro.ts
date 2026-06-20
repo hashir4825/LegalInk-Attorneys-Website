@@ -10,18 +10,23 @@ export class Intro implements OnInit, OnDestroy {
 
   private timer: any;
 
-  ngOnInit(): void {
+ ngOnInit(): void {
 
-    this.timer = setTimeout(() => {
+  this.timer = setTimeout(() => {
 
-      window.scrollTo({
-        top: window.innerHeight,
-        behavior: 'smooth'
-      });
+    // User has already scrolled manually
+    if (window.scrollY > 20) {
+      return;
+    }
 
-    }, 5000);
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
 
-  }
+  }, 5000);
+
+}
 
   ngOnDestroy(): void {
 
