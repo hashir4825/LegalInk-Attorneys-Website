@@ -16,6 +16,9 @@ searchTerm = '';
 selectedCategory = '';
 selectedPracticeArea = '';
 selectedLocation = '';
+locations: string[] = [];
+categories: string[] = [];
+practiceAreas: string[] = [];
 
   lawyers = [
 
@@ -166,9 +169,58 @@ filteredLawyers: any[] = [];
 
 
 
-  constructor() {
-    this.filteredLawyers = [...this.lawyers];
-  }
+constructor() {
+
+  this.filteredLawyers = [...this.lawyers];
+
+  this.updateFilterOptions();
+
+}
+updateFilterOptions() {
+
+  // Always show all available locations
+  this.locations = [
+    ...new Set(this.lawyers.map(x => x.location))
+  ].sort();
+
+  // Always show all categories
+  this.categories = [
+    ...new Set(this.lawyers.map(x => x.category))
+  ].sort();
+
+  // Show practice areas based on current Location + Category + Search
+  const filtered = this.lawyers.filter(lawyer => {
+
+    const matchesSearch =
+      !this.searchTerm ||
+      lawyer.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      lawyer.practiceArea.toLowerCase().includes(this.searchTerm.toLowerCase());
+
+    const matchesLocation =
+      !this.selectedLocation ||
+      lawyer.location === this.selectedLocation;
+
+    const matchesCategory =
+      !this.selectedCategory ||
+      lawyer.category === this.selectedCategory;
+
+    return matchesSearch &&
+           matchesLocation &&
+           matchesCategory;
+
+  });
+
+  this.practiceAreas = [
+    ...new Set(
+      filtered.flatMap(x =>
+        x.practiceArea
+          .split(',')
+          .map(area => area.trim())
+      )
+    )
+  ].sort();
+
+}
 filterLawyers() {
 
   this.filteredLawyers = this.lawyers.filter(lawyer => {
@@ -186,11 +238,12 @@ filterLawyers() {
       !this.selectedCategory ||
       lawyer.category === this.selectedCategory;
 
-    const matchesPracticeArea =
-      !this.selectedPracticeArea ||
-      lawyer.practiceArea
-        .toLowerCase()
-        .includes(this.selectedPracticeArea.toLowerCase());
+const matchesPracticeArea =
+  !this.selectedPracticeArea ||
+  lawyer.practiceArea
+    .split(',')
+    .map(area => area.trim().toLowerCase())
+    .includes(this.selectedPracticeArea.toLowerCase());
 
     return (
       matchesSearch &&
@@ -200,7 +253,7 @@ filterLawyers() {
     );
 
   });
-
+this.updateFilterOptions();
 }
 clearFilters() {
 
@@ -209,7 +262,8 @@ clearFilters() {
   this.selectedCategory = '';
   this.selectedPracticeArea = '';
 
-  this.filteredLawyers = [...this.lawyers];
+this.filteredLawyers = [...this.lawyers];
 
+this.updateFilterOptions();
 }
 }

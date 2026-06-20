@@ -3,6 +3,7 @@
 ========================================== */
 
 .team-section {
+  margin-top: 80px;
   padding: 80px 20px;
   background: #ffffff;
 }
@@ -258,7 +259,9 @@
 
   border: 1px solid #bdbdbd;
   background: #fff;
+  
 }
+
 
 .search-box {
   display: flex;
