@@ -16,37 +16,37 @@ export class Home implements OnInit {
 
   currentSlide = 0;
 
-  testimonials = [
+testimonials = [
 
-    {
-      company: 'Swifty Technologies LLC FZ',
-      designation: 'Chief Executive Officer',
-      review:
-        'Legalink Attorneys consistently demonstrated exceptional professionalism, responsiveness and commercial understanding. Their advice was practical, strategic and delivered with the highest level of integrity. We confidently recommend the firm for complex corporate and commercial matters.'
-    },
+  {
+    company: 'Faltoo Sey Paltoo (Guarantee) Limited',
+    designation: 'Chief Executive Officer',
+    review:
+      'Legalink Attorneys has been our trusted legal advisor for over three years. The firm successfully handled the complete legal incorporation of our NGO and continues to advise us on governance, contractual matters, employment issues and regulatory compliance. Their work has consistently been thorough, reliable and strategically aligned with our organisational objectives.'
+  },
 
-    {
-      company: 'Faltoo Sey Paltoo',
-      designation: 'Founder',
-      review:
-        'The Legalink team provided outstanding legal support throughout our engagement. Their attention to detail, proactive communication and ability to simplify complex legal issues gave us complete confidence in every stage of the process.'
-    },
+  {
+    company: 'Swifty Technologies LLC FZ',
+    designation: 'Chief Executive Officer',
+    review:
+      'Muhammad Yar Lak and Legalink Attorneys provided exceptional legal support across a range of commercial and technology-focused agreements, including SaaS, NDAs, referral agreements and managed services contracts. Their professionalism, commercial awareness and practical advice have been invaluable to our business.'
+  },
 
-    {
-      company: 'Corporate Client',
-      designation: 'Managing Director',
-      review:
-        'Working with Legalink Attorneys has been an excellent experience. Their lawyers are knowledgeable, approachable and always available to provide timely legal solutions tailored to our business requirements.'
-    },
+  {
+    company: 'NXI Trading Ltd.',
+    designation: 'Chief Executive Officer',
+    review:
+      'Legalink Attorneys acted as our external legal counsel in relation to payment and technology-related commercial activities. Their advice on commercial agreements, payment gateway structures, merchant services and data protection matters was consistently practical, reliable and delivered to the highest professional standards.'
+  },
 
-    {
-      company: 'Business Client',
-      designation: 'Director',
-      review:
-        'Legalink Attorneys consistently exceeded our expectations with their professionalism, legal expertise and commitment to achieving practical outcomes. We highly value our long-standing professional relationship with the firm.'
-    }
+  {
+    company: 'Punjab Information Technology Board (PITB)',
+    designation: 'Director – Incubation Wing',
+    review:
+      'Legalink Attorneys has provided legal, regulatory and commercial advisory services across technology-focused public sector initiatives, including startup ecosystems, innovation projects and investment structures. Their expertise, professionalism and strategic legal guidance make them a highly recommended legal advisor.'
+  }
 
-  ];
+];
 
   ngOnInit(): void {
 
