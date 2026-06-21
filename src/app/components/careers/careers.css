@@ -16,7 +16,6 @@
   display: inline-block;
   margin-bottom: 18px;
 
-  font-family: "Inter", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -25,19 +24,24 @@
   color: #8b8b8b;
 }
 
+/* ======================================
+   MAIN HEADING
+====================================== */
+
 .careers-intro h1 {
   max-width: 820px;
   margin: 0;
-
-  font-family: "Cormorant Garamond", serif;
   font-size: 3.3rem;
   font-weight: 600;
   line-height: 1.15;
-  color: #0d1b2a;
+  color: #193959;
 }
 
+/* Highlight "Legalink Attorneys" */
+
 .careers-intro h1 span {
-  color: #c9a876;
+  color:#193959;
+  font-weight: 700;
 }
 
 .title-divider {
@@ -45,8 +49,12 @@
   height: 2px;
   margin: 28px 0 42px;
 
-  background: #c9a876;
+  background: #102542;
 }
+
+/* ======================================
+   CONTENT
+====================================== */
 
 .careers-content {
   max-width: 900px;
@@ -54,8 +62,6 @@
 
 .careers-content p {
   margin: 0 0 28px;
-
-  font-family: "Inter", sans-serif;
   font-size: 1.08rem;
   line-height: 1.9;
 
@@ -66,9 +72,9 @@
   margin-bottom: 0;
 }
 
-/* ==========================
-   Responsive
-========================== */
+/* ======================================
+   TABLET
+====================================== */
 
 @media (max-width: 992px) {
 
@@ -82,6 +88,10 @@
 
 }
 
+/* ======================================
+   MOBILE
+====================================== */
+
 @media (max-width: 768px) {
 
   .careers-intro h1 {
@@ -94,6 +104,10 @@
   }
 
 }
+
+/* ======================================
+   SMALL MOBILE
+====================================== */
 
 @media (max-width: 480px) {
 
