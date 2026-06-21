@@ -184,6 +184,74 @@ memberships:[
 'Punjab Bar Council'
 ]
 },
+
+'abdul-rehman-khan':{
+name:'Ahmad Abdul Rehman Khan',
+designation:'Senior Associate',
+location:'Lahore',
+email:'ahmad.rehman79a@gmail.com',
+phone:'+92 (322) 4504678',
+image:'/Assets/images/Abdulrehman.png',
+
+practiceAreas:[
+'Commercial Litigation',
+'Civil Litigation',
+'Arbitration',
+'Corporate Advisory',
+'Employment Law',
+'Intellectual Property',
+'Regulatory Compliance',
+'Contract Drafting',
+'Consumer Protection',
+'Banking & Commercial Disputes'
+],
+
+bio:[
+'Ahmad Abdul Rehman Khan is a Senior Associate at Legalink Attorneys with extensive experience in commercial litigation, corporate advisory, regulatory compliance and dispute resolution.',
+'He regularly represents clients before the Civil Courts, High Courts, Consumer Courts, Punjab Revenue Authority, Securities and Exchange Commission of Pakistan (SECP) Tribunal, National Tariff Commission and Intellectual Property forums.',
+'Prior to joining Legalink Attorneys, he served as a Senior Associate at Bhandari Naqvi Riaz, where he advised domestic and international corporate clients on commercial disputes, arbitration, employment law, intellectual property registration, contractual matters and regulatory compliance.',
+'Earlier in his career, he worked with Ahmer Bilal Soofi & Co. and A.G. Tariq & Co., where he gained substantial experience in civil, commercial, banking, labour, family and contractual litigation.',
+'His practice includes drafting complex commercial agreements, legal opinions, pleadings, petitions, legal notices and regulatory responses, while providing strategic advice to corporate clients across diverse sectors.',
+'He has also authored academic and professional publications on arbitration, commercial contracts, competition law and enforcement of international arbitral awards, reflecting his strong interest in legal research and commercial law.'
+],
+
+education:[
+'LL.M. Commercial Law, University of Management and Technology',
+'LL.B., Pakistan College of Law'
+],
+
+memberships:[
+'Punjab Bar Council'
+],
+
+representativeMatters:[
+  {
+    title:'Commercial & Civil Litigation',
+    description:'Represented corporate and individual clients in complex civil and commercial disputes before Civil Courts and the High Courts.'
+  },
+  {
+    title:'International Arbitration',
+    description:'Assisted partners in High Court and Supreme Court proceedings relating to the recognition and enforcement of international arbitral awards.'
+  },
+  {
+    title:'Corporate Advisory',
+    description:'Drafted employment, consultancy, lease, non-disclosure and sponsor loan agreements together with legal opinions for corporate clients and technology companies.'
+  },
+  {
+    title:'Regulatory Representation',
+    description:'Appeared before the Punjab Revenue Authority, SECP Tribunal, Consumer Courts and National Tariff Commission on behalf of corporate clients.'
+  },
+  {
+    title:'Intellectual Property',
+    description:'Advised clients on intellectual property matters and filed trademark and other intellectual property registration applications.'
+  },
+  {
+    title:'Employment & Regulatory Compliance',
+    description:'Prepared legal opinions on labour and employment matters and responded to notices issued by regulatory authorities including Social Security and EOBI.'
+  }
+]
+},
+
 'justice-shahid-jamil-khan':{
 name:'Justice (R) Shahid Jamil Khan',
 designation:'Of Counsel',

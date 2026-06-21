@@ -58,7 +58,18 @@ practiceAreas: string[] = [];
   phone: '042 36280666',
   route: '/partners/haroon-hashmi'
 },
-
+{
+  category: 'Partner',
+  type: 'partner',
+  name: 'Ahmad Abdul Rehman Khan',
+  designation: 'Partner',
+  location: 'Lahore',
+  practiceArea: 'Commercial Litigation, Civil Litigation, Arbitration, Corporate Advisory, Employment Law, Intellectual Property, Regulatory Compliance',
+  image: '/Assets/images/Abdulrehman.png',
+  email: 'info@legalinkattorneys.com',
+  phone: '042 36280666',
+  route: '/partners/abdul-rehman-khan'
+},
 
 
 {
