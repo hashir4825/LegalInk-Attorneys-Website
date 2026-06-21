@@ -64,7 +64,7 @@ practiceAreas: string[] = [];
   name: 'Ahmad Abdul Rehman Khan',
   designation: 'Partner',
   location: 'Lahore',
-  practiceArea: 'Commercial Litigation, Civil Litigation, Arbitration, Corporate Advisory, Employment Law, Intellectual Property, Regulatory Compliance',
+  practiceArea: 'Anti dumping, Arbitration and civil litigation, Intellectual Property, Regulatory Compliance',
   image: '/Assets/images/Abdulrehman.png',
   email: 'info@legalinkattorneys.com',
   phone: '042 36280666',

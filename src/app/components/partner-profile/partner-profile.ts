@@ -187,27 +187,21 @@ memberships:[
 
 'abdul-rehman-khan':{
 name:'Ahmad Abdul Rehman Khan',
-designation:'Senior Associate',
+designation:'Partner',
 location:'Lahore',
-email:'ahmad.rehman79a@gmail.com',
-phone:'+92 (322) 4504678',
+email:'info@legalinkattorneys.com',
+phone:'042 36280666',
 image:'/Assets/images/Abdulrehman.png',
 
 practiceAreas:[
-'Commercial Litigation',
-'Civil Litigation',
-'Arbitration',
-'Corporate Advisory',
-'Employment Law',
-'Intellectual Property',
-'Regulatory Compliance',
-'Contract Drafting',
-'Consumer Protection',
-'Banking & Commercial Disputes'
+  'Anti dumping',
+  'Arbitration and civil litigation',
+  'Intellectual Property',
+  'Regulatory Compliance'
 ],
 
 bio:[
-'Ahmad Abdul Rehman Khan is a Senior Associate at Legalink Attorneys with extensive experience in commercial litigation, corporate advisory, regulatory compliance and dispute resolution.',
+'Ahmad Abdul Rehman Khan is a Partner at Legalink Attorneys with extensive experience in commercial litigation, corporate advisory, regulatory compliance and dispute resolution.',
 'He regularly represents clients before the Civil Courts, High Courts, Consumer Courts, Punjab Revenue Authority, Securities and Exchange Commission of Pakistan (SECP) Tribunal, National Tariff Commission and Intellectual Property forums.',
 'Prior to joining Legalink Attorneys, he served as a Senior Associate at Bhandari Naqvi Riaz, where he advised domestic and international corporate clients on commercial disputes, arbitration, employment law, intellectual property registration, contractual matters and regulatory compliance.',
 'Earlier in his career, he worked with Ahmer Bilal Soofi & Co. and A.G. Tariq & Co., where he gained substantial experience in civil, commercial, banking, labour, family and contractual litigation.',
