@@ -1,0 +1,79 @@
+<!-- ==========================================
+     HERO
+========================================== -->
+
+@if (insight) {
+
+<section class="article-hero">
+
+    <div class="container">
+
+        <div class="article-meta">
+
+            <span>{{ insight.type }}</span>
+
+            <span class="dot"></span>
+
+            <span>{{ insight.date }}</span>
+
+        </div>
+
+        <h1>
+
+            {{ insight.title }}
+
+        </h1>
+
+        <p class="author">
+
+            {{ insight.author }}
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     ARTICLE
+========================================== -->
+
+<section class="article-content">
+
+    <div class="container article-container">
+
+        @for (paragraph of insight.content; track $index) {
+
+        <p>
+
+            {{ paragraph }}
+
+        </p>
+
+        }
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     BACK LINK
+========================================== -->
+
+<section class="back-section">
+
+    <div class="container">
+
+        <a
+            routerLink="/insights"
+            class="back-link">
+
+            ← Back to Insights
+
+        </a>
+
+    </div>
+
+</section>
+
+}

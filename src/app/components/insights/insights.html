@@ -1,0 +1,103 @@
+<!-- ==========================================
+     HERO SECTION
+========================================== -->
+
+<section class="insights-hero">
+
+    <div class="container">
+
+        <p class="hero-label">
+            Publications
+        </p>
+
+        <h1>
+            Insights
+        </h1>
+
+        <p class="hero-description">
+            Legal updates, publications and commentary from Legalink
+            Attorneys on significant legal and regulatory developments
+            affecting businesses in Pakistan.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     INSIGHTS LIST
+========================================== -->
+
+<section class="insights-list">
+
+    <div class="container">
+
+        @for (insight of insights; track insight.slug) {
+
+        <article class="insight-item">
+
+            <!-- ==========================================
+                 ARTICLE META
+            ========================================== -->
+
+            <div class="insight-meta">
+
+                <span class="type">
+                    {{ insight.type }}
+                </span>
+
+                <span class="divider"></span>
+
+                <span class="date">
+                    {{ insight.date }}
+                </span>
+
+            </div>
+
+            <!-- ==========================================
+                 TITLE
+            ========================================== -->
+
+            <h2>
+
+                <a
+                    class="title-link"
+                    [routerLink]="['/insights', insight.slug]">
+
+                    {{ insight.title }}
+
+                </a>
+
+            </h2>
+
+            <!-- ==========================================
+                 SUMMARY
+            ========================================== -->
+
+            <p class="summary">
+
+                {{ insight.summary }}
+
+            </p>
+
+            <!-- ==========================================
+                 READ ARTICLE
+            ========================================== -->
+
+            <a
+                class="read-more"
+                [routerLink]="['/insights', insight.slug]">
+
+                Read Article
+
+                <span>→</span>
+
+            </a>
+
+        </article>
+
+        }
+
+    </div>
+
+</section>
