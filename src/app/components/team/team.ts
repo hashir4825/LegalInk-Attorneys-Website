@@ -41,7 +41,7 @@ practiceAreas: string[] = [];
   designation: 'Of Counsel',
   location: 'Lahore',
   practiceArea: 'Constitutional Law, Taxation, Corporate Law, Banking Law, Commercial Law',
-  image: '/Assets/images/JusticeShahid.png',
+  image: '/Assets/images/shahid.png',
   email: 'info@legalinkattorneys.com',
   phone: '042 36280666',
   route: '/partners/justice-shahid-jamil-khan'

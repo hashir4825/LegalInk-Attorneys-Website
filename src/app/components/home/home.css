@@ -1,405 +1,281 @@
-/* =====================================
-   HERO SECTION
-===================================== */
 
-.hero {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
+/* ==================================================
+   ABOUT SECTION
+================================================== */
 
-  display: flex;
-  align-items: center;
-
-  padding: 0 8%;
+.about-section{
+    padding:110px 30px;
+    background:#ffffff;
 }
 
-/* =====================================
-   BACKGROUND SLIDER
-===================================== */
-
-.hero-slider {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+.about-container{
+    max-width:1400px;
+    margin:0 auto;
 }
 
-.slide {
-  position: absolute;
-  inset: 0;
+/* ==================================================
+   HEADER
+================================================== */
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  animation-duration: 8s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-
-  will-change: transform;
+.about-header{
+    max-width:920px;
+    margin:0 auto 80px;
+    text-align:center;
 }
 
-/* Slide Images */
-
-.slide1 {
-  background-image:     url('/Assets/images/bg.png');
-  animation-name: slide1;
+.about-subtitle{
+    color:#102542;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:18px;
 }
 
-.slide2 {
-  background-image: url('/Assets/images/bg3.jpg');
-  animation-name: slide2;
+.about-header h2{
+    color:#08111f;
+    font-size:48px;
+    font-weight:300;
+    line-height:1.25;
+    margin-bottom:22px;
 }
 
-.slide3 {
-  background-image: url('/Assets/images/bg2.png');
-  animation-name: slide3;
+.about-line{
+    width:90px;
+    height:3px;
+    background:#102542;
+    margin:0 auto 28px;
 }
 
-.slide4 {
-  background-image: url('/Assets/images/bg4.jpg');
-  animation-name: slide4;
+.about-description{
+    color:#5b6470;
+    font-size:18px;
+    line-height:2;
 }
 
-/* ==========================
-   CONTINUOUS LOOP ANIMATION
-========================== */
-/* Slide 1 */
-@keyframes slide1 {
-  0%, 20% {
-    transform: translateX(0);
-    z-index: 2;
-  }
+/* ==================================================
+   PRACTICE AREA GRID
+================================================== */
 
-  25%, 100% {
-    transform: translateX(100%);
-    z-index: 1;
-  }
+.expertise-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
 }
 
-/* Slide 2 */
-@keyframes slide2 {
-  0%, 20% {
-    transform: translateX(-100%);
-  }
+/* ==================================================
+   PRACTICE AREA CARD
+================================================== */
 
-  25%, 45% {
-    transform: translateX(0);
-  }
+.expertise-card{
 
-  50%, 100% {
-    transform: translateX(100%);
-  }
-}
+    display:block;
 
-/* Slide 3 */
-@keyframes slide3 {
-  0%, 45% {
-    transform: translateX(-100%);
-  }
+    text-align:center;
 
-  50%, 70% {
-    transform: translateX(0);
-  }
+    text-decoration:none;
 
-  75%, 100% {
-    transform: translateX(100%);
-  }
-}
+    color:inherit;
 
-/* Slide 4 */
-@keyframes slide4 {
+    background:#ffffff;
 
-  0%,70% {
-    transform: translateX(-100%);
-  }
+    padding:42px 32px;
 
-  75%,100% {
-    transform: translateX(0);
-  }
-}
-/* =====================================
-   OVERLAY
-===================================== */
+    border:1px solid #e5e7eb;
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
+    border-radius:16px;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(20, 25, 35, 0.78),
-      rgba(20, 25, 35, 0.45),
-      rgba(20, 25, 35, 0.20)
-    );
+    cursor:pointer;
 
-  z-index: 1;
-}
-
-/* =====================================
-   CONTENT
-===================================== */
-
-.hero-content {
-  position: relative;
-  z-index: 5;
-
-  max-width: 650px;
-}
-
-.hero-label {
-  color: #d1d5db;
-
-  font-size: .85rem;
-  font-weight: 600;
-
-  letter-spacing: 4px;
-  text-transform: uppercase;
-
-  border-left: 3px solid #9ca3af;
-
-  padding-left: 14px;
-
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  margin: 0;
-
-  color: white;
-
-  font-size: clamp(3.5rem, 6vw, 5.8rem);
-
-  line-height: 1.05;
-  font-weight: 700;
-
-  text-shadow: 0 4px 20px rgba(0,0,0,.35);
-}
-
-.hero-subtitle {
-  margin-top: 24px;
-
-  color: rgba(255,255,255,.92);
-
-  font-size: 1.1rem;
-
-  line-height: 1.8;
-}
-
-/* =====================================
-   BUTTONS
-===================================== */
-
-.hero-actions {
-  display: flex;
-  gap: 18px;
-
-  margin-top: 40px;
-}
-
-.hero-btn {
-  padding: 16px 32px;
-
-  background: white;
-  color: #1f2937;
-
-  text-decoration: none;
-
-  border-radius: 6px;
-
-  font-weight: 600;
-}
-
-.hero-btn-outline {
-  padding: 16px 32px;
-
-  border: 1px solid rgba(255,255,255,.4);
-
-  color: white;
-
-  text-decoration: none;
-
-  border-radius: 6px;
-
-  background: rgba(255,255,255,.05);
-}
-
-.slider-bar {
-  position: absolute;
-  bottom: 35px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  display: flex;
-  gap: 10px;
-
-  z-index: 5;
-}
-
-.bar {
-  width: 55px;
-  height: 4px;
-
-  border-radius: 20px;
-
-  background: rgba(255,255,255,.25);
-
-  transition: all .3s ease;
-}
-
-.bar1 { animation: active1 8s infinite linear; }
-.bar2 { animation: active2 8s infinite linear; }
-.bar3 { animation: active3 8s infinite linear; }
-.bar4 { animation: active4 8s infinite linear; }
-
-@keyframes active1 {
-  0%,24.99% { background:#d1d5db; }
-  25%,100% { background:rgba(255,255,255,.25); }
-}
-
-@keyframes active2 {
-  0%,24.99% { background:rgba(255,255,255,.25); }
-  25%,49.99% { background:#d1d5db; }
-  50%,100% { background:rgba(255,255,255,.25); }
-}
-
-@keyframes active3 {
-  0%,49.99% { background:rgba(255,255,255,.25); }
-  50%,74.99% { background:#d1d5db; }
-  75%,100% { background:rgba(255,255,255,.25); }
-}
-
-@keyframes active4 {
-  0%,74.99% { background:rgba(255,255,255,.25); }
-  75%,100% { background:#d1d5db; }
-}
-/* =====================================
-   MOBILE
-===================================== */
-
-@media(max-width:768px){
-
-  .hero {
-    justify-content: center;
-    text-align: center;
-
-    padding: 100px 25px;
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .hero-btn,
-  .hero-btn-outline {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-  }
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
 
 }
 
-/* ===========================
-   FIRM OVERVIEW and practice areas
-=========================== */
+.expertise-card:hover{
 
-.about-section {
-  padding: 100px 30px;
-  background: #ffffff;
+    transform:translateY(-8px);
+
+    border-color:#102542;
+
+    box-shadow:
+        0 20px 45px rgba(16,37,66,.10);
+
 }
 
-.about-container {
-  max-width: 1400px;
-  margin: 0 auto;
+/* ==================================================
+   ICON
+================================================== */
+
+.expertise-card i{
+
+    font-size:42px;
+
+    color:#102542;
+
+    margin-bottom:24px;
+
+    transition:.35s ease;
+
 }
 
-.about-header {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 70px;
+.expertise-card:hover i{
+
+    transform:scale(1.12);
+
 }
 
-.about-subtitle {
-  color: #1e3a8a;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+/* ==================================================
+   TITLE
+================================================== */
+
+.expertise-card h3{
+
+    margin:0 0 14px;
+
+    color:#08111f;
+
+    font-size:25px;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
 }
 
-.about-header h2 {
-  font-size: 46px;
-  color: #0f172a;
-  line-height: 1.3;
-  margin-bottom: 20px;
+.expertise-card:hover h3{
+
+    color:#102542;
+
 }
 
-.about-line {
-  width: 90px;
-  height: 3px;
-  background: #1e3a8a;
-  margin: 0 auto 25px;
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.expertise-card p{
+
+    margin:0;
+
+    color:#64748b;
+
+    font-size:15px;
+
+    line-height:1.9;
+
 }
 
-.about-description {
-  font-size: 18px;
-  line-height: 2;
-  color: #475569;
+/* ==================================================
+   EXPLORE BUTTON
+================================================== */
+
+.practice-button-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:60px;
+
 }
 
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+.practice-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 34px;
+
+    background:#102542;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
 }
 
-.expertise-card {
-  text-align: center;
+.practice-button:hover{
 
-  padding: 35px;
+    background:#08111f;
 
-  border: 1px solid #e2e8f0;
-  border-radius: 20px;
+    transform:translateY(-3px);
 
-  transition: .3s;
+    box-shadow:
+        0 15px 35px rgba(16,37,66,.18);
+
 }
 
-.expertise-card:hover {
-  transform: translateY(-6px);
-  border-color: #1e3a8a;
+.practice-button i{
+
+    transition:.3s ease;
+
 }
 
-.expertise-card i {
-  font-size: 38px;
-  color: #1e3a8a;
-  margin-bottom: 20px;
+.practice-button:hover i{
+
+    transform:translateX(5px);
+
 }
 
-.expertise-card h3 {
-  font-size: 24px;
-  color: #0f172a;
-  margin-bottom: 12px;
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width:1024px){
+
+    .about-header h2{
+        font-size:38px;
+    }
+
+    .expertise-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 }
 
-.expertise-card p {
-  color: #64748b;
-  line-height: 1.8;
-}
+@media (max-width:768px){
 
-@media(max-width:1024px){
+    .about-section{
+        padding:80px 20px;
+    }
 
-  .expertise-grid{
-    grid-template-columns:1fr;
-  }
+    .about-header{
+        margin-bottom:60px;
+    }
 
-  .about-header h2{
-    font-size:36px;
-  }
+    .about-header h2{
+        font-size:32px;
+    }
+
+    .about-description{
+        font-size:16px;
+    }
+
+    .expertise-grid{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .expertise-card{
+        padding:36px 28px;
+    }
+
+    .expertise-card h3{
+        font-size:22px;
+    }
 
 }
 

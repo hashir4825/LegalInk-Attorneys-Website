@@ -1,34 +1,527 @@
-/* ===========================
-   NAVBAR APPEAR ON SCROLL
-=========================== */
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+
+    background:rgba(8,17,31,.97);
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* ==========================================
+   SHOW / HIDE ANIMATION
+========================================== */
 
 .navbar-transition{
-  transition:
-    opacity .45s ease,
-    transform .45s ease,
-    visibility .45s ease;
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        visibility .35s ease;
 }
 
 .navbar-hidden{
-
-  opacity:0;
-
-  visibility:hidden;
-
-  pointer-events:none;
-
-  transform:translateY(-25px);
-
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateY(-20px);
 }
 
 .navbar-visible{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateY(0);
+}
 
-  opacity:1;
+/* ==========================================
+   CONTAINER
+========================================== */
 
-  visibility:visible;
+.navbar-container{
+    max-width:1320px;
+    margin:0 auto;
+    padding:0 30px;
+}
 
-  pointer-events:auto;
+.navbar-inner{
+    height:84px;
 
-  transform:translateY(0);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    text-decoration:none;
+}
+
+.logo-wrapper{
+    position:relative;
+}
+
+.logo-glow{
+    position:absolute;
+    inset:0;
+
+    border-radius:50%;
+
+    background:rgba(16,37,66,.35);
+
+    filter:blur(12px);
+
+    transition:.3s;
+}
+
+.navbar-brand:hover .logo-glow{
+    background:rgba(16,37,66,.55);
+}
+
+.logo-circle{
+    position:relative;
+
+    padding:4px;
+
+    background:#fff;
+
+    border-radius:50%;
+}
+
+.logo-image{
+    width:56px;
+    height:56px;
+
+    border-radius:50%;
+
+    background:url('/Assets/images/logo.jpeg') center/cover no-repeat;
+}
+
+/* ==========================================
+   BRAND TEXT
+========================================== */
+
+.brand-text h1{
+    margin:0;
+
+    color:#fff;
+
+    font-size:28px;
+    font-weight:700;
+    line-height:1.1;
+}
+
+.brand-text p{
+    margin-top:4px;
+
+    color:#C8A96A;
+
+    font-size:11px;
+    letter-spacing:.20em;
+    text-transform:uppercase;
+}
+/* ==========================================
+   DESKTOP MENU
+========================================== */
+
+.desktop-menu{
+    display:flex;
+    align-items:center;
+    gap:34px;
+}
+
+/* ==========================================
+   NAVIGATION LINKS
+========================================== */
+
+.nav-link{
+    position:relative;
+
+    color:#f8fafc;
+
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:600;
+
+    letter-spacing:.04em;
+
+    transition:.3s ease;
+}
+
+.nav-link:hover{
+    color:#C8A96A;
+}
+
+.nav-link::after{
+    content:'';
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    background:#C8A96A;
+
+    transition:width .3s ease;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+.nav-link.active{
+    color:#C8A96A;
+}
+
+.nav-link.active::after{
+    width:100%;
+}
+
+/* ==========================================
+   PRACTICE AREAS MEGA MENU
+========================================== */
+
+.mega-wrapper{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    height:84px;
+}
+
+.mega-menu{
+    position:absolute;
+
+    top:100%;
+
+    right:0;          /* instead of left */
+
+    left:auto;
+
+    transform:none;
+
+    width:820px;
+
+    display:flex;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+
+    z-index:99999;
+}
+
+@keyframes megaFade{
+
+    from{
+        opacity:0;
+        transform:translateX(-20%) translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(-20%) translateY(0);
+    }
+
+}
+/* ==========================================
+   MEGA MENU - LEFT PANEL
+========================================== */
+
+.mega-left{
+
+    width:260px;
+
+    background:#08111f;
+
+    padding:18px 0;
+
+}
+
+.category-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 28px;
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s ease;
+
+}
+
+.category-item:hover{
+
+    background:#102542;
+
+    color:#ffffff;
+
+}
+
+.category-item.active{
+
+    background:#102542;
+
+    border-left:4px solid #ffffff;
+
+}
+
+.category-item i{
+
+    font-size:12px;
+
+    opacity:.8;
+
+}
+
+/* ==========================================
+   MEGA MENU - RIGHT PANEL
+========================================== */
+
+.mega-right{
+
+    flex:1;
+
+    background:#ffffff;
+
+    padding:32px;
+
+}
+
+.mega-right h3{
+
+    margin:0 0 22px;
+
+    color:#08111f;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+.submenu{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px 30px;
+
+}
+
+.submenu-link{
+
+    color:#4b5563;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.25s ease;
+
+}
+
+.submenu-link:hover{
+
+    color:#102542;
+
+    padding-left:8px;
+
+}
+
+.view-all-wrapper{
+
+    margin-top:30px;
+
+    padding-top:20px;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+.view-all{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#08111f;
+
+    font-weight:700;
+
+    transition:.25s ease;
+
+}
+
+.view-all:hover{
+
+    color:#102542;
+
+}
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.mobile-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:#ffffff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+.mobile-menu{
+
+    display:none;
+
+    background:#08111f;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.mobile-link{
+
+    display:block;
+
+    padding:18px 24px;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.25s ease;
+
+}
+
+.mobile-link:hover{
+
+    background:#102542;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:992px){
+
+    .desktop-menu{
+
+        display:none;
+
+    }
+
+    .mobile-toggle{
+
+        display:block;
+
+    }
+
+    .mobile-menu{
+
+        display:block;
+
+    }
+
+    .mega-wrapper{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .navbar-container{
+
+        padding:0 20px;
+
+    }
+
+    .brand-text h1{
+
+        font-size:22px;
+
+    }
+
+    .brand-text p{
+
+        font-size:10px;
+
+        letter-spacing:.15em;
+
+    }
+
+    .logo-image{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .brand-text p{
+
+        display:none;
+
+    }
+
+    .brand-text h1{
+
+        font-size:20px;
+
+    }
 
 }

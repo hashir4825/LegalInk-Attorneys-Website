@@ -12,6 +12,11 @@ import {
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
 
+import {
+  PRACTICE_AREAS,
+  PracticeCategory
+} from '../../data/practice-areas';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -24,54 +29,128 @@ import { filter } from 'rxjs/operators';
 })
 export class Navbar {
 
+  /* ==========================================
+     PRACTICE AREAS (READ ONLY)
+  ========================================== */
+
+  readonly practiceAreas = PRACTICE_AREAS;
+
+  megaMenuOpen = false;
+
+  activeCategory: PracticeCategory = PRACTICE_AREAS[0];
+
+  /* ==========================================
+     NAVBAR VISIBILITY
+  ========================================== */
+
   visible = true;
+
+  /* ==========================================
+     MOBILE MENU
+  ========================================== */
 
   mobileMenuOpen = false;
 
   constructor(private router: Router) {
 
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
+      .pipe(
+        filter(event => event instanceof NavigationEnd)
+      )
       .subscribe(() => {
 
+        // Close all menus on navigation
         this.mobileMenuOpen = false;
+        this.megaMenuOpen = false;
 
-        // wait until navigation finishes rendering
         setTimeout(() => {
           this.updateNavbar();
         });
 
       });
 
+    this.updateNavbar();
   }
 
-  toggleMenu() {
+  /* ==========================================
+     TOGGLE MOBILE MENU
+  ========================================== */
+
+  toggleMenu(): void {
 
     this.mobileMenuOpen = !this.mobileMenuOpen;
 
+    // ensure mega menu closes
+    this.megaMenuOpen = false;
   }
+
+  /* ==========================================
+     SCROLL HANDLER
+  ========================================== */
 
   @HostListener('window:scroll')
-  onScroll() {
-
+  onScroll(): void {
     this.updateNavbar();
+  }
+
+  /* ==========================================
+     ESC KEY CLOSE ALL MENUS
+  ========================================== */
+
+  @HostListener('document:keydown.escape')
+  closeMenus(): void {
+
+    this.megaMenuOpen = false;
+    this.mobileMenuOpen = false;
 
   }
 
-  private updateNavbar() {
+  /* ==========================================
+     NAVBAR VISIBILITY LOGIC
+  ========================================== */
 
-    if (this.router.url === '/') {
+  private updateNavbar(): void {
 
-      // Hide navbar while intro is visible
-      this.visible = window.scrollY > window.innerHeight - 80;
+    const isHome =
+      this.router.url === '/';
+
+    if (isHome) {
+
+      this.visible =
+        window.scrollY > window.innerHeight - 80;
 
     } else {
 
-      // Always show navbar on other pages
       this.visible = true;
-
     }
+  }
+
+  /* ==========================================
+     MEGA MENU CONTROL
+  ========================================== */
+
+  openMegaMenu(): void {
+
+    this.mobileMenuOpen = false;
+    this.megaMenuOpen = true;
 
   }
 
+  closeMegaMenu(): void {
+
+    this.megaMenuOpen = false;
+
+  }
+
+  setActiveCategory(category: PracticeCategory): void {
+
+    this.activeCategory = category;
+
+  }
+
+  closeMenu(): void {
+
+    this.megaMenuOpen = false;
+
+  }
 }

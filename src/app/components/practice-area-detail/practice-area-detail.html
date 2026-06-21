@@ -1,0 +1,135 @@
+<section
+class="hero"
+*ngIf="practice">
+
+<div class="hero-content">
+
+<a
+routerLink="/practice-areas"
+class="back">
+
+← Back to Practice Areas
+
+</a>
+
+<h1>
+
+{{ practice.title }}
+
+</h1>
+
+<div class="divider"></div>
+
+<p>
+
+{{ practice.shortDescription }}
+
+</p>
+
+</div>
+
+</section>
+
+<section
+class="content"
+*ngIf="practice">
+
+<div class="container">
+
+<!-- Overview -->
+
+<div class="section">
+
+<h2>
+
+Overview
+
+</h2>
+
+<p
+*ngFor="let item of practice.overview">
+
+{{ item }}
+
+</p>
+
+</div>
+
+<!-- Services -->
+
+<div
+class="section"
+*ngIf="practice.services.length">
+
+<h2>
+
+Our Services
+
+</h2>
+
+<ul>
+
+<li
+*ngFor="let service of practice.services">
+
+{{ service }}
+
+</li>
+
+</ul>
+
+</div>
+
+<!-- Representative Matters -->
+
+<div
+class="section"
+*ngIf="practice.representativeMatters.length">
+
+<h2>
+
+Representative Engagements
+
+</h2>
+
+<ul>
+
+<li
+*ngFor="let matter of practice.representativeMatters">
+
+{{ matter }}
+
+</li>
+
+</ul>
+
+</div>
+
+<!-- Lawyers -->
+
+<div
+class="section"
+*ngIf="practice.lawyers.length">
+
+<h2>
+
+Related Lawyers
+
+</h2>
+
+<ul>
+
+<li
+*ngFor="let lawyer of practice.lawyers">
+
+{{ lawyer }}
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>

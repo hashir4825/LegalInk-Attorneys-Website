@@ -1,81 +1,188 @@
 <nav
-  class="fixed top-0 left-0 w-full z-50 bg-[#08111f]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl navbar-transition"
+  class="navbar navbar-transition"
   [class.navbar-hidden]="!visible"
   [class.navbar-visible]="visible">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="navbar-container">
 
-    <div class="flex justify-between items-center h-20">
+    <div class="navbar-inner">
 
-      <!-- Logo -->
+      <!-- ==========================================
+           LOGO
+      ========================================== -->
 
-      <a routerLink="/" class="flex items-center gap-4 group">
+      <a
+        routerLink="/"
+        class="navbar-brand">
 
-        <div class="relative">
-          <div class="absolute inset-0 bg-green-400/30 rounded-full blur-md group-hover:bg-green-400/50 transition"></div>
+        <div class="logo-wrapper">
 
-          <div class="relative bg-white p-1 rounded-full shadow-lg">
-            <div class="bg-[url('/Assets/images/logo.jpeg')] bg-cover bg-center w-14 h-14 rounded-full"></div>
+          <div class="logo-glow"></div>
+
+          <div class="logo-circle">
+
+            <div class="logo-image"></div>
+
           </div>
+
         </div>
 
-        <div>
-          <h1 class="text-2xl font-bold font-poppins text-white tracking-wide leading-tight">
+        <div class="brand-text">
+
+          <h1>
+
             Legalink Attorneys
+
           </h1>
 
-          <p class="text-xs text-green-400 font-medium tracking-[0.18em] uppercase">
+          <p>
+
             Approachable • Excellence • Innovative
+
           </p>
+
         </div>
 
       </a>
 
-      <!-- Desktop Menu -->
+      <!-- ==========================================
+           DESKTOP NAVIGATION
+      ========================================== -->
 
-      <div class="hidden lg:flex items-center gap-8">
+      <div class="desktop-menu">
+
+        <!-- Home -->
 
         <a
           routerLink="/"
-          class="relative text-sm font-semibold tracking-wide text-slate-200 hover:text-green-400 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-green-400 after:transition-all after:duration-300 hover:after:w-full">
+          class="nav-link">
+
           Home
+
         </a>
+
+        <!-- Lawyers -->
 
         <a
           routerLink="/lawyers"
-          class="relative text-sm font-semibold tracking-wide text-slate-200 hover:text-green-400 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-green-400 after:transition-all after:duration-300 hover:after:w-full">
+          class="nav-link">
+
           Lawyers
+
         </a>
 
-        <a
-          routerLink="/"
-          fragment="about"
-          class="relative text-sm font-semibold tracking-wide text-slate-200 hover:text-green-400 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-green-400 after:transition-all after:duration-300 hover:after:w-full">
-          Practice Areas
-        </a>
+        <!-- ==========================================
+             PRACTICE AREAS
+        ========================================== -->
+
+        <div
+          class="mega-wrapper"
+          (mouseenter)="openMegaMenu()"
+          (mouseleave)="closeMegaMenu()">
+
+          <a
+            routerLink="/practice-areas"
+            class="nav-link">
+
+            Practice Areas
+
+          </a>
+
+          <!-- Mega Menu -->
+
+          <div
+            class="mega-menu"
+            *ngIf="megaMenuOpen"
+            (click)="closeMenu()">
+
+            <!-- Left Panel -->
+
+            <div class="mega-left">
+
+              <div
+                class="category-item"
+                *ngFor="let category of practiceAreas"
+                [class.active]="activeCategory.slug === category.slug"
+                (mouseenter)="setActiveCategory(category)">
+
+                <span>
+
+                  {{ category.title }}
+
+                </span>
+
+                <i class="fas fa-angle-right"></i>
+
+              </div>
+
+            </div>
+
+            <!-- Right Panel -->
+
+            <div class="mega-right">
+
+              <h3>
+
+                {{ activeCategory.title }}
+
+              </h3>
+
+              <div class="submenu">
+
+                <a
+                  *ngFor="let item of activeCategory.children"
+                  [routerLink]="[
+                    '/practice-areas',
+                    activeCategory.slug,
+                    item.slug
+                  ]"
+                  class="submenu-link">
+
+                  {{ item.title }}
+
+                </a>
+
+              </div>
+
+              <div class="view-all-wrapper">
+
+                <a
+                  routerLink="/practice-areas"
+                  class="view-all">
+
+                  View All Practice Areas
+
+                  <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Contact -->
 
         <a
           routerLink="/"
           fragment="contact"
-          class="relative text-sm font-semibold tracking-wide text-slate-200 hover:text-green-400 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-green-400 after:transition-all after:duration-300 hover:after:w-full">
+          class="nav-link">
+
           Contact
-        </a>
-
-        <a
-          routerLink="/"
-          fragment="contact"
-          class="bg-[#d9a45f] text-[#08111f] px-6 py-3 rounded-xl font-bold shadow-lg shadow-[#d9a45f]/20 hover:bg-green-500 hover:text-white hover:-translate-y-1 transition duration-300">
-
-          Book Consultation
 
         </a>
 
       </div>
 
-      <!-- Mobile Hamburger -->
+      <!-- ==========================================
+           MOBILE MENU BUTTON
+      ========================================== -->
 
       <button
-        class="lg:hidden text-white text-3xl"
+        class="mobile-toggle"
         (click)="toggleMenu()">
 
         <i
@@ -90,55 +197,50 @@
 
   </div>
 
-  <!-- Mobile Menu -->
+  <!-- ==========================================
+       MOBILE MENU
+  ========================================== -->
 
   <div
     *ngIf="mobileMenuOpen"
-    class="lg:hidden bg-[#08111f] border-t border-white/10">
+    class="mobile-menu">
 
     <a
       routerLink="/"
       (click)="mobileMenuOpen=false"
-      class="block px-6 py-4 text-white hover:bg-white/5">
+      class="mobile-link">
+
       Home
+
     </a>
 
     <a
       routerLink="/lawyers"
       (click)="mobileMenuOpen=false"
-      class="block px-6 py-4 text-white hover:bg-white/5">
+      class="mobile-link">
+
       Lawyers
+
     </a>
 
     <a
-      routerLink="/"
-      fragment="about"
+      routerLink="/practice-areas"
       (click)="mobileMenuOpen=false"
-      class="block px-6 py-4 text-white hover:bg-white/5">
+      class="mobile-link">
+
       Practice Areas
+
     </a>
 
     <a
       routerLink="/"
       fragment="contact"
       (click)="mobileMenuOpen=false"
-      class="block px-6 py-4 text-white hover:bg-white/5">
+      class="mobile-link">
+
       Contact
+
     </a>
-
-    <div class="p-4">
-
-      <a
-        routerLink="/"
-        fragment="contact"
-        (click)="mobileMenuOpen=false"
-        class="block text-center bg-[#d9a45f] text-[#08111f] py-3 rounded-xl font-bold">
-
-        Book Consultation
-
-      </a>
-
-    </div>
 
   </div>
 

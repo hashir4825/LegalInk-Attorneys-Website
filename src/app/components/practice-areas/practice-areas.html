@@ -1,0 +1,59 @@
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Practice Areas</h1>
+
+        <div class="divider"></div>
+
+        <p>
+
+            Legalink Attorneys provides comprehensive legal
+            services across transactional, litigation and
+            regulatory practice areas.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="practice-section">
+
+    <div class="practice-container">
+
+        <div
+            class="category"
+            *ngFor="let category of categories">
+
+            <h2>
+
+                {{ category.title }}
+
+            </h2>
+
+            <ul>
+
+                <li
+                    *ngFor="let item of category.children">
+
+                    <a
+                      [routerLink]="[
+                        '/practice-areas',
+                        category.slug,
+                        item.slug
+                      ]">
+
+                        {{ item.title }}
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>

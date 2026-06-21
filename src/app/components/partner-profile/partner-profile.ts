@@ -190,7 +190,7 @@ designation:'Of Counsel',
 location:'Lahore',
 email:'info@legalinkattorneys.com',
 phone:'042 36280666',
-image:'/Assets/images/JusticeShahid.png',
+image:'/Assets/images/shahid.png',
 practiceAreas:[
 'Constitutional Law',
 'Taxation',
